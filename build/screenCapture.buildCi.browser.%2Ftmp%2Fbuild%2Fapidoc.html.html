@@ -1,0 +1,377 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/RGBboy/urlsafe-base64">urlsafe-base64 (v1.0.0)</a>
+</h1>
+<h4>URL Safe Base64 encoding</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.urlsafe-base64">module urlsafe-base64</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.decode">
+            function <span class="apidocSignatureSpan">urlsafe-base64.</span>decode
+            <span class="apidocSignatureSpan">(base64)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.encode">
+            function <span class="apidocSignatureSpan">urlsafe-base64.</span>encode
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.validate">
+            function <span class="apidocSignatureSpan">urlsafe-base64.</span>validate
+            <span class="apidocSignatureSpan">(base64)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">urlsafe-base64.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.urlsafe-base64.decode">module urlsafe-base64.decode</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.decode.decode">
+            function <span class="apidocSignatureSpan">urlsafe-base64.</span>decode
+            <span class="apidocSignatureSpan">(base64)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.urlsafe-base64.encode">module urlsafe-base64.encode</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.encode.encode">
+            function <span class="apidocSignatureSpan">urlsafe-base64.</span>encode
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.urlsafe-base64.validate">module urlsafe-base64.validate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.validate.validate">
+            function <span class="apidocSignatureSpan">urlsafe-base64.</span>validate
+            <span class="apidocSignatureSpan">(base64)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.urlsafe-base64" id="apidoc.module.urlsafe-base64">module urlsafe-base64</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.urlsafe-base64.decode" id="apidoc.element.urlsafe-base64.decode">
+        function <span class="apidocSignatureSpan">urlsafe-base64.</span>decode
+        <span class="apidocSignatureSpan">(base64)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decode(base64) {
+
+  // Add removed at end '='
+  base64 += Array(5 - base64.length % 4).join('=');
+
+  base64 = base64
+    .replace(/\-/g, '+') // Convert '-' to '+'
+    .replace(/\_/g, '/'); // Convert '_' to '/'
+
+  return new Buffer(base64, 'base64');
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      throw err;
+      return;
+    };
+    randomURLSafeBase64 = URLSafeBase64.encode(buf);
+  });
+```
+
+### .<span class="apidocCodeKeywordSpan">decode</span>(string)
+
+Decodes a URL Safe Base64 string as a buffer.
+
+``` javascript
+var someURLSafeBase64 = '';
+URLSafeBase64.decode(someURLSafeBase64); // returns a buffer
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.urlsafe-base64.encode" id="apidoc.element.urlsafe-base64.encode">
+        function <span class="apidocSignatureSpan">urlsafe-base64.</span>encode
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encode(buffer) {
+
+  return buffer.toString('base64')
+    .replace(/\+/g, '-') // Convert '+' to '-'
+    .replace(/\//g, '_') // Convert '/' to '_'
+    .replace(/=+$/, ''); // Remove ending '='
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Require it within your module:
+
+``` javascript
+var URLSafeBase64 = require('urlsafe-base64');
+```
+
+### .<span class="apidocCodeKeywordSpan">encode</span>(buffer)
+
+Encodes a buffer as a URL Safe Base64 string. This function encodes to
+the RFC 4648 Spec where '+' is encoded as '-' and '/' is encoded as '_'.
+The padding character '=' is removed.
+
+``` javascript
+var randomURLSafeBase64;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.urlsafe-base64.validate" id="apidoc.element.urlsafe-base64.validate">
+        function <span class="apidocSignatureSpan">urlsafe-base64.</span>validate
+        <span class="apidocSignatureSpan">(base64)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validate(base64) {
+
+  return /^[A-Za-z0-9\-_]+$/.test(base64);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Decodes a URL Safe Base64 string as a buffer.
+
+``` javascript
+var someURLSafeBase64 = '';
+URLSafeBase64.decode(someURLSafeBase64); // returns a buffer
+```
+
+### .<span class="apidocCodeKeywordSpan">validate</span>(string)
+
+Validates a string if it is URL Safe Base64 encoded.
+
+``` javascript
+var validURLSafeBase64 = '';
+URLSafeBase64.validate(validURLSafeBase64); // returns true
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.urlsafe-base64.decode" id="apidoc.module.urlsafe-base64.decode">module urlsafe-base64.decode</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.urlsafe-base64.decode.decode" id="apidoc.element.urlsafe-base64.decode.decode">
+        function <span class="apidocSignatureSpan">urlsafe-base64.</span>decode
+        <span class="apidocSignatureSpan">(base64)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decode(base64) {
+
+  // Add removed at end '='
+  base64 += Array(5 - base64.length % 4).join('=');
+
+  base64 = base64
+    .replace(/\-/g, '+') // Convert '-' to '+'
+    .replace(/\_/g, '/'); // Convert '_' to '/'
+
+  return new Buffer(base64, 'base64');
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      throw err;
+      return;
+    };
+    randomURLSafeBase64 = URLSafeBase64.encode(buf);
+  });
+```
+
+### .<span class="apidocCodeKeywordSpan">decode</span>(string)
+
+Decodes a URL Safe Base64 string as a buffer.
+
+``` javascript
+var someURLSafeBase64 = '';
+URLSafeBase64.decode(someURLSafeBase64); // returns a buffer
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.urlsafe-base64.encode" id="apidoc.module.urlsafe-base64.encode">module urlsafe-base64.encode</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.urlsafe-base64.encode.encode" id="apidoc.element.urlsafe-base64.encode.encode">
+        function <span class="apidocSignatureSpan">urlsafe-base64.</span>encode
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encode(buffer) {
+
+  return buffer.toString('base64')
+    .replace(/\+/g, '-') // Convert '+' to '-'
+    .replace(/\//g, '_') // Convert '/' to '_'
+    .replace(/=+$/, ''); // Remove ending '='
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Require it within your module:
+
+``` javascript
+var URLSafeBase64 = require('urlsafe-base64');
+```
+
+### .<span class="apidocCodeKeywordSpan">encode</span>(buffer)
+
+Encodes a buffer as a URL Safe Base64 string. This function encodes to
+the RFC 4648 Spec where '+' is encoded as '-' and '/' is encoded as '_'.
+The padding character '=' is removed.
+
+``` javascript
+var randomURLSafeBase64;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.urlsafe-base64.validate" id="apidoc.module.urlsafe-base64.validate">module urlsafe-base64.validate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.urlsafe-base64.validate.validate" id="apidoc.element.urlsafe-base64.validate.validate">
+        function <span class="apidocSignatureSpan">urlsafe-base64.</span>validate
+        <span class="apidocSignatureSpan">(base64)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validate(base64) {
+
+  return /^[A-Za-z0-9\-_]+$/.test(base64);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Decodes a URL Safe Base64 string as a buffer.
+
+``` javascript
+var someURLSafeBase64 = '';
+URLSafeBase64.decode(someURLSafeBase64); // returns a buffer
+```
+
+### .<span class="apidocCodeKeywordSpan">validate</span>(string)
+
+Validates a string if it is URL Safe Base64 encoded.
+
+``` javascript
+var validURLSafeBase64 = '';
+URLSafeBase64.validate(validURLSafeBase64); // returns true
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
