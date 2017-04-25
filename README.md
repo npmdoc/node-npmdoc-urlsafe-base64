@@ -1,4 +1,7 @@
-# api documentation for  [urlsafe-base64 (v1.0.0)](https://github.com/RGBboy/urlsafe-base64)  [![npm package](https://img.shields.io/npm/v/npmdoc-urlsafe-base64.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-urlsafe-base64) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-urlsafe-base64.svg)](https://travis-ci.org/npmdoc/node-npmdoc-urlsafe-base64)
+# npmdoc-urlsafe-base64
+
+#### basic api documentation for  [urlsafe-base64 (v1.0.0)](https://github.com/RGBboy/urlsafe-base64)  [![npm package](https://img.shields.io/npm/v/npmdoc-urlsafe-base64.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-urlsafe-base64) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-urlsafe-base64.svg)](https://travis-ci.org/npmdoc/node-npmdoc-urlsafe-base64)
+
 #### URL Safe Base64 encoding
 
 [![NPM](https://nodei.co/npm/urlsafe-base64.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/urlsafe-base64)
@@ -59,7 +62,8 @@
         "test": "make test",
         "unit": "make unit"
     },
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "bin": {}
 }
 ```
 
