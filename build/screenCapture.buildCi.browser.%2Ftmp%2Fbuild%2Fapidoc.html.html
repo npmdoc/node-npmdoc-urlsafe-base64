@@ -83,46 +83,50 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">urlsafe-base64.</span>urlsafe_base64</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">urlsafe-base64.</span>version</span>
 
         </li>
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.urlsafe-base64.decode">module urlsafe-base64.decode</a><ol>
+    <li class="apidocModuleLi"><a href="#apidoc.module.urlsafe-base64.urlsafe_base64">module urlsafe-base64.urlsafe_base64</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.decode.decode">
-            function <span class="apidocSignatureSpan">urlsafe-base64.</span>decode
+            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.urlsafe_base64.decode">
+            function <span class="apidocSignatureSpan">urlsafe-base64.urlsafe_base64.</span>decode
             <span class="apidocSignatureSpan">(base64)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.urlsafe-base64.encode">module urlsafe-base64.encode</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.encode.encode">
-            function <span class="apidocSignatureSpan">urlsafe-base64.</span>encode
+            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.urlsafe_base64.encode">
+            function <span class="apidocSignatureSpan">urlsafe-base64.urlsafe_base64.</span>encode
             <span class="apidocSignatureSpan">(buffer)</span>
             </a>
 
         </li>
 
-    </ol></li>
+        <li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.urlsafe-base64.validate">module urlsafe-base64.validate</a><ol>
+            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.urlsafe_base64.validate">
+            function <span class="apidocSignatureSpan">urlsafe-base64.urlsafe_base64.</span>validate
+            <span class="apidocSignatureSpan">(base64)</span>
+            </a>
+
+        </li>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.urlsafe-base64.validate.validate">
-            function <span class="apidocSignatureSpan">urlsafe-base64.</span>validate
-            <span class="apidocSignatureSpan">(base64)</span>
-            </a>
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">urlsafe-base64.urlsafe_base64.</span>version</span>
 
         </li>
 
@@ -243,15 +247,17 @@ URLSafeBase64.validate(validURLSafeBase64); // returns true
 
 
 
+
+
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.urlsafe-base64.decode" id="apidoc.module.urlsafe-base64.decode">module urlsafe-base64.decode</a></h1>
+<h1><a href="#apidoc.module.urlsafe-base64.urlsafe_base64" id="apidoc.module.urlsafe-base64.urlsafe_base64">module urlsafe-base64.urlsafe_base64</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.urlsafe-base64.decode.decode" id="apidoc.element.urlsafe-base64.decode.decode">
-        function <span class="apidocSignatureSpan">urlsafe-base64.</span>decode
+        <a href="#apidoc.element.urlsafe-base64.urlsafe_base64.decode" id="apidoc.element.urlsafe-base64.urlsafe_base64.decode">
+        function <span class="apidocSignatureSpan">urlsafe-base64.urlsafe_base64.</span>decode
         <span class="apidocSignatureSpan">(base64)</span>
         </a>
     </h2>
@@ -288,15 +294,10 @@ URLSafeBase64.decode(someURLSafeBase64); // returns a buffer
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.urlsafe-base64.encode" id="apidoc.module.urlsafe-base64.encode">module urlsafe-base64.encode</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.urlsafe-base64.encode.encode" id="apidoc.element.urlsafe-base64.encode.encode">
-        function <span class="apidocSignatureSpan">urlsafe-base64.</span>encode
+        <a href="#apidoc.element.urlsafe-base64.urlsafe_base64.encode" id="apidoc.element.urlsafe-base64.urlsafe_base64.encode">
+        function <span class="apidocSignatureSpan">urlsafe-base64.urlsafe_base64.</span>encode
         <span class="apidocSignatureSpan">(buffer)</span>
         </a>
     </h2>
@@ -329,15 +330,10 @@ var randomURLSafeBase64;
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.urlsafe-base64.validate" id="apidoc.module.urlsafe-base64.validate">module urlsafe-base64.validate</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.urlsafe-base64.validate.validate" id="apidoc.element.urlsafe-base64.validate.validate">
-        function <span class="apidocSignatureSpan">urlsafe-base64.</span>validate
+        <a href="#apidoc.element.urlsafe-base64.urlsafe_base64.validate" id="apidoc.element.urlsafe-base64.urlsafe_base64.validate">
+        function <span class="apidocSignatureSpan">urlsafe-base64.urlsafe_base64.</span>validate
         <span class="apidocSignatureSpan">(base64)</span>
         </a>
     </h2>
@@ -364,6 +360,8 @@ var validURLSafeBase64 = '';
 URLSafeBase64.validate(validURLSafeBase64); // returns true
 ...</pre></li>
     </ul>
+
+
 
 
 </div>
